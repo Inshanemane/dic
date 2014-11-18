@@ -1,0 +1,25 @@
+#Nasty in my Taxi
+
+import random
+
+card_values = {'2': 20, 'Ace': 15, 'Face': 10, '10': 10,'Other': 5}
+
+numberofcards= int(input("Number of cards you want?"))
+
+
+def new_hand(numcard):
+    global card_values, chosen
+    hand = []
+    for i in range(numcard):
+        chosen = random.choice(card_values.keys())
+        hand.append(chosen)
+    print hand
+
+    
+    
+def calc_value(thevalues):
+    print card_values[thevalues]
+        
+        
+new_hand(numberofcards) 
+calc_value(chosen)
